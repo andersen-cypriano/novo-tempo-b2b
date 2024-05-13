@@ -76,6 +76,9 @@ $font-2: "Cinzel", serif;
           padding: 10px!important;
           display: none;
           ul {
+            box-shadow: 0px 3px 6px #00000029;
+            border: 1px solid #DEDEDE;
+            border-radius: 0px 0px 21px 0px;
             li {
               a {
                 label {

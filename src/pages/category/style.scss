@@ -53,7 +53,7 @@ $font-2: "Cinzel", serif;
         }
         > .coluna {
           display: none;
-          border-radius: 0px 0px 21px 0px;
+          border-radius: 0px 0px 21px 0px!important;
           box-shadow: 0 0 5px rgba(0,0,0,0.3);
           > div {
             float: none;
@@ -347,7 +347,6 @@ div[class^="ordenar-listagem rodape"] {
 
 @media(max-width:768px) {
   .conteiner-principal {
-    padding-top: 240px;
   }
   .conteudo {
     .ordenar-listagem {

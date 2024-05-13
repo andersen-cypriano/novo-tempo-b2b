@@ -61,11 +61,21 @@ $font-2: "Cinzel", serif;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1%;
+  
   > div {
     width: 49%;
 
     // CONTENT IMAGE
     &:nth-of-type(1) {
+      .conteiner-imagem {
+        > div {
+          border: 0!important;
+        }
+        img {
+          border-radius: 23px;
+          overflow: hidden;
+        }
+      }
     }
     // CONTENT INFOS
     &:nth-of-type(2) {
@@ -152,7 +162,11 @@ $font-2: "Cinzel", serif;
   }
 }
 .acoes-produto.preco-restrito {
+  &::after {
+    display: none!important;
+  }
   .comprar {
+    
     > a {
       font-size: 13px!important;
     }
@@ -208,11 +222,19 @@ $font-2: "Cinzel", serif;
     width: 300px;
     height: 40px;
     background: #402d5d;
-    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    font-size: 0;
+    &:before {
+      content: "Adicionar ao carrinho";
+      font-size: 16px!important;
+      display: block;
+      color: #fff;
+      text-transform:uppercase;
+
+    }
     i.icon-shopping-cart {
       display: none;
     }
@@ -221,6 +243,46 @@ $font-2: "Cinzel", serif;
 .disponibilidade-produto {
   span.estoque {
     display: none !important;
+  }
+}
+
+.comprar {
+ .disponibilidade {
+  display: none !important;
+ } 
+}
+
+form.avise-me-form {
+  .avise-tit {
+    color: #402D5D!important;
+    font-size: 24px;
+  }  
+  .avise-descr {
+    margin: 15px 0;
+    color: #000 !important;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .avise-input {
+    .controls {
+      input {
+        border-radius: 0;
+        border: 1px solid #402D5D;
+        height: 30px;
+        padding: 0;
+        text-align: center;
+        color: #000;
+      }
+    }
+  }
+  .avise-btn {
+    input {
+      background: #402D5D!important;
+      color: #FFF;
+      font-size: 16px;
+      border-radius: 0;
+      width: 90%;
+    }
   }
 }
 
@@ -355,6 +417,7 @@ $font-2: "Cinzel", serif;
       }
     }
   }
+  
   .info-principal-produto {
     border: 0 !important;
     margin-bottom: 50px!important;

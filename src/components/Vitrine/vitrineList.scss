@@ -1,6 +1,21 @@
 $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
-
+.vitrine-mas-vendido {
+  strong {
+    font-family: $font-2;
+    text-transform: uppercase;
+    font-size: 0;
+    font-weight: 800;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    &:before {
+      content: 'Os Mais Vendidos';
+      display: block;
+      font-size: 26px!important;
+    }
+  }
+}
 #listagemProdutos {
   > div[class^="titulo-"] {
     background: transparent!important;
@@ -10,9 +25,16 @@ $font-2: "Cinzel", serif;
     strong {
       font-family: $font-2;
       text-transform: uppercase;
-      font-size: 28px;
+      font-size: 0;
       font-weight: 800;
       color: #000;
+      display: flex;
+      justify-content: center;
+      &:before {
+        content: 'Novidades';
+        display: block;
+        font-size: 26px!important;
+      }
     }
   }
   > ul {

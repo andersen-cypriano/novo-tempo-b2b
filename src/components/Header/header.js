@@ -46,6 +46,11 @@ const headerDesktop = {
         element.nextSibling.textContent = text;
       });
   },
+  createSocialTopBar: function () {
+    const clone = document.querySelector('.content-footer .lista-redes ul').cloneNode(true);
+    clone.classList.add('sociais-topo')
+    document.querySelector('.content-top-bar .container-center .row-fluid').prepend(clone);
+  },
   createAlertBar: () => {
     const alertBar = createElement("div", "alert-bar");
     alertBar.appendChild(createElement("div", "container-center"));
@@ -107,6 +112,7 @@ const headerDesktop = {
   init: function () {
     this.createElementHeader();
     !isDesktop ? headerMObile.init() : null;
+    this.createSocialTopBar();
   },
 };
 
@@ -173,10 +179,21 @@ const headerMObile = {
         element.nextElementSibling.classList.toggle('submenu-open')
       })
     })
+    this.createAccountButton();
+  },
+  createAccountButton: function () {
+    const buttonAccount = document.createElement('li');
+    buttonAccount.classList.add('buttonAccount');
+    buttonAccount.innerHTML = `
+    <a href="/conta/login" title="Minha conta">
+      <i></i>
+      <strong class="titulo cor-secundaria">Minha Conta</strong>
+    </a>
+    `;
+    document.querySelector('.content-menu-mobile ul.nivelUm').prepend(buttonAccount);
   },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header init9')
   },
 };
 

@@ -33,7 +33,7 @@ const footer = {
 
     const title = document.createElement('span');
     title.classList.add('titulo');
-    title.textContent = 'Formas de pagamento';
+    title.textContent = 'Meios de pagamento e envio';
 
     contentPayment.innerHTML = `
     <ul>

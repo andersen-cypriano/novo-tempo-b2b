@@ -1,6 +1,54 @@
 $purple: #402d5d;
 
 .pagina-login {
+  #modalRecuperarSenha {
+    .modal-header {
+      span.titulo {
+        color: $purple;
+      }
+      .close {
+        color: $purple;
+        opacity: 1;
+        font-size: 35px;
+      } 
+    }
+    .modal-body {
+      border-top: #402D5D;
+      border-style: none;
+      
+      .conteudoRecuperarSenha {
+        p {
+          font-size: 14px;
+          
+        }
+        .form-inline {
+          label[for="id_email_recuperar_senha"] {
+            strong {
+              color: $purple;
+            }
+          }
+          #id_email_recuperar_senha {
+            border: 1px solid $purple;
+            border-radius: 0;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .modal-footer {
+      background: transparent;
+      a[data-dismiss="modal"] {
+        background: transparent;
+        border: 1px solid $purple;
+        color: $purple;
+      }
+      #btnRecuperarSenha {
+        border: 1px solid $purple;
+        background: $purple;
+        color: #FFF;
+      }
+    }
+  }
   .cadastro {
     .cabecalho-interno {
       > div {
@@ -100,6 +148,8 @@ $purple: #402d5d;
           a.recuperar-senha {
             margin: -40px 0 0 0;
             float: right !important;
+            z-index: 100;
+            position: relative;
           }
         }
       }
@@ -114,6 +164,17 @@ $purple: #402d5d;
             display: block;
             padding: 5px;
             margin-bottom: 46px;
+            position: relative;
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              width:30px;
+              height: 30px;
+              background: #402D5D;
+              bottom: -30px;
+              right: 0;
+            }
           }
           .icon-edit {
             display: flex;
@@ -155,6 +216,9 @@ $purple: #402d5d;
 
 @media (max-width: 768px) {
   .pagina-login {
+    #corpo {
+      padding-top: 70px!important;
+    }
     .cadastro {
       .cabecalho-interno {
         .titulo {

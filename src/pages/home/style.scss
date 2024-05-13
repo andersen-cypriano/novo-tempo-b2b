@@ -56,3 +56,20 @@
     }
   }
 }
+
+@media(max-width: 768px){
+  .pagina-inicial {
+    #cabecalho {
+      + .secao-banners {
+        margin-top: 55px!important;
+      }
+    }
+  }
+  .secao-banners {
+    div[class="conteiner"] {
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

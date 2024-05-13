@@ -48,6 +48,7 @@ $font-2: "Cinzel", serif;
       border: 1px solid #6134ba;
       border-radius: 40px;
       padding-left: 30px;
+      background: transparent;
     }
     button.newsletter-assinar {
       border-radius: 40px;
@@ -55,6 +56,9 @@ $font-2: "Cinzel", serif;
       width: 144px;
       border: 0;
       background: #6134ba;
+      &::after {
+        content: 'CADASTRAR';
+      }
     }
   }
 }

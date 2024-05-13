@@ -27,9 +27,7 @@ div[class="conteiner"] {
   background-color: transparent !important;
   box-shadow: none !important;
 }
-.conteiner-principal {
-  padding-top: 200px;
-}
+
 .container-center {
   max-width: 1280px;
   margin: 0 auto;
@@ -53,6 +51,54 @@ div[class="conteiner"] {
       }
     }
   }
+  .acoes-produto {
+    a[class="botao botao-comprar principal"] {
+      position: relative;
+      font-size: 0!important;
+      &:hover {
+        &::before {
+          color: #FFF;
+          background: #402d5d;
+          
+        }
+      }
+      &::before {
+        position: absolute;
+        content: 'Fazer pedido';
+        font-family: $font-2;
+        font-size: 14px!important;
+        font-weight: 600;
+        color: #402d5d;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+      }
+    }
+  }
+  .acoes-produto-responsiva {
+    a[class^="tag-comprar"] {
+      position: relative;
+      height: 30px;
+      span[class="titulo"] {
+        display:none!important
+      }
+      &::before {
+        position: absolute;
+        width: 100%!important;
+        text-align: center!important;
+        content: 'Fazer pedido';
+        font-family: $font-2;
+        font-size: 14px!important;
+        font-weight: 600;
+        color: #402d5d;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+      }
+    }
+  }
 }
 #cabecalho {
   display: none;
@@ -66,7 +112,11 @@ div[class="conteiner"] {
     }
   }
 }
-
+.bandeiras-produto {
+  .adicionado-carrinho {
+    background-color: #402d5d !important;
+  }
+}
 .bandeiras-produto:has(.bandeira-indisponivel) {
   display: flex;
     justify-content: center;
@@ -87,6 +137,5 @@ div[class="conteiner"] {
     padding-top: 0!important;
   }
   .conteiner-principal {
-    padding-top: 226px!important;
   }
 }

@@ -14,7 +14,7 @@ $font-2: "Cinzel", serif;
 }
 .pagina-carrinho {
   #corpo {
-    margin-top: 86px;
+    margin-top: 13px;
     .finalizar-compra {
       .cabecalho-interno {
         .titulo {
@@ -227,9 +227,15 @@ $font-2: "Cinzel", serif;
         background: #402D5D!important;
         border-radius: 0!important;
         border: 0!important;
-        font-size: 15px!important;
+        font-size: 0px!important;
         color: #FFF!important;
         text-transform: uppercase!important;
+        &:before {
+          content: 'Fazer pedido';
+          font-size: 14px;
+          color: #FFF!important;
+          text-transform: uppercase!important;
+        }
       }
     }
   }
