@@ -179,10 +179,21 @@ const headerMObile = {
         element.nextElementSibling.classList.toggle('submenu-open')
       })
     })
+    this.createAccountButton();
+  },
+  createAccountButton: function () {
+    const buttonAccount = document.createElement('li');
+    buttonAccount.classList.add('buttonAccount');
+    buttonAccount.innerHTML = `
+    <a href="/conta/login" title="Minha conta">
+      <i></i>
+      <strong class="titulo cor-secundaria">Minha Conta</strong>
+    </a>
+    `;
+    document.querySelector('.content-menu-mobile ul.nivelUm').prepend(buttonAccount);
   },
   init: function () {
     isDesktop ? null : this.createButtonMainMenu();
-    console.log('header init9')
   },
 };
 

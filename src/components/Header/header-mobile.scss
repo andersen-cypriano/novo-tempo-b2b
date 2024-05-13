@@ -8,12 +8,13 @@ $font-2: "Cinzel", serif;
     padding: 10px !important;
   }
   header[class="header"] {
-    width: 100vw;
-    position: fixed;
-    top: 0;
+    width: 100%;
+    position: sticky;
+    top: -90px;
     z-index: 100;
     background-color: #fff;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
   }
   
   div#cabecalho {
