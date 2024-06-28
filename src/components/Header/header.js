@@ -55,7 +55,7 @@ const headerDesktop = {
     const alertBar = createElement("div", "alert-bar");
     alertBar.appendChild(createElement("div", "container-center"));
     alertBar.children[0].innerHTML = `
-      <p>SITE EXCLUSIVO PARA LOJISTAS. COMPRAS PARA USO PESSOAL <a href="/" target="_blank">CLIQUE AQUI</a>.</p>
+      <p>SITE EXCLUSIVO PARA LOJISTAS. COMPRAS PARA USO PESSOAL <a href="https://loja-novo-tempo-b2c.lojaintegrada.com.br/" target="_blank">CLIQUE AQUI</a>.</p>
     `;
     document.querySelector(".content-top-bar").after(alertBar);
   },
@@ -158,25 +158,25 @@ const headerMObile = {
     })
   },
   addEventListenerWithSubMenu: function () {
-    document.querySelectorAll('.nivelUm > li.com-filho >a').forEach(element => {
+    document.querySelectorAll('.nivelUm > li.com-filho >a > i').forEach(element => {
       element.addEventListener('click', e => {
         e.preventDefault();
-        element.classList.toggle('menu-active')
-        element.nextElementSibling.classList.toggle('submenu-open')
+        element.parentElement.classList.toggle('menu-active')
+        element.parentElement.nextElementSibling.classList.toggle('submenu-open')
       })
     })
-    document.querySelectorAll('.nivelDois > li.com-filho >a').forEach(element => {
+    document.querySelectorAll('.nivelDois > li.com-filho >a i').forEach(element => {
       element.addEventListener('click', e => {
         e.preventDefault();
-        element.classList.toggle('menu-active');
-        element.nextElementSibling.classList.toggle('submenu-open')
+        element.parentElement.classList.toggle('menu-active')
+        element.parentElement.nextElementSibling.classList.toggle('submenu-open')
       })
     })
     document.querySelectorAll('.nivelTres > li.com-filho >a').forEach(element => {
       element.addEventListener('click', e => {
         e.preventDefault();
-        element.classList.toggle('menu-active');
-        element.nextElementSibling.classList.toggle('submenu-open')
+        element.parentElement.classList.toggle('menu-active')
+        element.parentElement.nextElementSibling.classList.toggle('submenu-open')
       })
     })
     this.createAccountButton();

@@ -162,6 +162,25 @@ ul.nivel-tres {
     }
     ul {
       margin: 0;
+      > li.com-filho {
+        > a {
+          position: relative;
+           > i {
+              position: absolute;
+              right: 0;
+              width: 50px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 50%;
+              transform: translateY(-50%);
+              &::before {
+                margin-right: 0;
+              }
+           }
+        }
+      }
     }
     ul.nivelUm {
       height: 290px !important;
@@ -227,8 +246,9 @@ ul.nivel-tres {
         a.menu-active {
           font-weight: 800;
           i {
-            transition: all 0.5s!important;
+            transition: all 0.5s ease!important;
             transform: rotate(90deg);
+            top: 0!important;
           }
         }
         a {
@@ -257,7 +277,6 @@ ul.nivel-tres {
         > a {
           display: flex;
           justify-content: space-between!important;
-          flex-direction: row-reverse!important;
           padding-left: 10px;
           i {
             background: transparent;
