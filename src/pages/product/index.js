@@ -5,7 +5,7 @@ const productPage = {
     document.querySelector('.breadcrumbs + .row-fluid').classList.add('content-produto');
   },
   moveButtonShare: function () {
-    document.querySelector('.info-principal-produto .nome-produto').after(document.querySelector('.produto-compartilhar'));
+    document.querySelector('.pagina-produto div.principal').after(document.querySelector('.produto-compartilhar'));
     
     // create button to share
     const btnShare = document.createElement('div');
@@ -25,8 +25,16 @@ const productPage = {
     this.moveButtonShare();
     this.moveButtonDisponibilidade();
   },
+  createFavoriteButton: function () {
+    const button = document.createElement("a");
+    button.classList.add("favorite-button-product");
+    button.setAttribute("href", `/conta/favorito/${PRODUTO_ID}/adicionar`);
+
+    document.querySelector(".info-principal-produto .nome-produto").after(button);
+  },
   init: function () {
     this.moveElements();
+    this.createFavoriteButton();
     window.matchMedia("(max-width: 768px)").matches ? productPageMobile.init() : null;
   }
 }
