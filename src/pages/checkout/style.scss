@@ -1,0 +1,110 @@
+.carrinho-checkout {
+  header {
+    .content-top-bar {
+      .container-center {
+        > .row-fluid {
+          justify-content: space-between !important;
+          .span6 {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  #formularioEndereco {
+    #exibirFormasEnvio {
+      display: none !important;
+    }
+    #formasEnvio {
+      #formas-envio-wrapper {
+        > div {
+          &:nth-of-type(1) {
+            .forma-conteiner {
+              .text-content {
+                display: none !important;
+              }
+              span.envio-nome {
+                font-size: 0;
+                &::before {
+                  content: "A combnar";
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            display: none !important;
+          }
+        }
+      }
+      .warning-text {
+        display: none !important;
+      }
+    }
+  }
+}
+
+#formas-pagamento-wrapper {
+  #formasPagamento {
+    .pagamento_selecao_conteiner {
+      > div {
+        &:nth-of-type(1) {
+          .forma-conteiner {
+            &::before {
+              content: "Forma de pagamento";
+            }
+            img {
+              display: none !important;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          > div.accordion-inner {
+            .entrega-content {
+              .entrega-form-group {
+                label[for="id_escolher_tipo_pagamento"] {
+                  display: none;
+                }
+                select[id="id_escolher_tipo_pagamento"] {
+                  option {
+                    &:nth-of-type(1) {
+                      display: none !important;
+                    }
+                  }
+                }
+              }
+              + div {
+                display: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #exibirFormasPagamento {
+    display: none !important;
+  }
+
+  #finalizarCompra {
+    width: 100%;
+    height: 41px;
+    border: 1px solid #402d5d;
+    font-size: 0px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #402d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before {
+      content: "Solicitar orçamento";
+      font-size: 14px;
+      color: #fff;
+    }
+    i {
+      display: none;
+    }
+  }
+}

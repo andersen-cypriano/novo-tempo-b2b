@@ -46,6 +46,7 @@ $font-2: "Cinzel", serif;
         padding: 10px;
         table.tabela-carrinho {
           thead {
+            
             tr {
               background: #BF90DE;
               th {
@@ -62,6 +63,9 @@ $font-2: "Cinzel", serif;
           tbody {
             td[data-produto-quantidade]:nth-last-of-type() {
               margin-bottom: 50px;
+            }
+            tr:has(.formas-envio) {
+              display: none!important;
             }
             tr {
               
@@ -126,13 +130,21 @@ $font-2: "Cinzel", serif;
             font-size: 14px;
             color: #8A40FF;
           }
-          a[data-target="#modalSolicitarOrcamento"] {
+          button[class="botao principal grande"] {
             height: 41px;
             border: 1px solid #402D5D;
-            font-size: 14px;
+            font-size: 0px;
             text-transform: uppercase;
             font-weight: 400;
             background: #402D5D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:before {
+              content: 'Solicitar orçamento';
+              font-size: 14px;
+              color: #FFF;
+            }
             i {
               display: none;
             }

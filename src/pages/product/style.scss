@@ -2,15 +2,14 @@ $font-1: "Montserrat", sans-serif;
 $font-2: "Cinzel", serif;
 
 .two-colors-variation {
-  font-size: 0!important;
-  width: 25px!important;
-  height: 25px!important;
-  padding: 0!important;
-  border-width: 0 0 25px 25px!important;
-  border-style: solid!important;
-  padding: 0!important;
-  min-height: auto!important;
-  
+  font-size: 0 !important;
+  width: 25px !important;
+  height: 25px !important;
+  padding: 0 !important;
+  border-width: 0 0 25px 25px !important;
+  border-style: solid !important;
+  padding: 0 !important;
+  min-height: auto !important;
 }
 // BREADCRUMB
 .breadcrumbs {
@@ -61,7 +60,7 @@ $font-2: "Cinzel", serif;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1%;
-  
+
   > div {
     width: 49%;
 
@@ -69,7 +68,7 @@ $font-2: "Cinzel", serif;
     &:nth-of-type(1) {
       .conteiner-imagem {
         > div {
-          border: 0!important;
+          border: 0 !important;
         }
         img {
           border-radius: 23px;
@@ -104,7 +103,6 @@ $font-2: "Cinzel", serif;
       }
     }
   }
-
 }
 
 .produto-compartilhar {
@@ -135,21 +133,21 @@ $font-2: "Cinzel", serif;
     position: absolute;
     top: 24px;
     ul {
-      margin-bottom: 10px!important;
+      margin-bottom: 10px !important;
       li {
         a {
           &:hover {
             i {
-              background: #2ab200!important;
+              background: #2ab200 !important;
             }
           }
         }
       }
       .visible-phone {
-        display: block!important;
+        display: block !important;
       }
       .fb-compartilhar {
-        display: none!important;
+        display: none !important;
       }
       .fa-whatsapp {
         display: flex;
@@ -186,12 +184,11 @@ $font-2: "Cinzel", serif;
 }
 .acoes-produto.preco-restrito {
   &::after {
-    display: none!important;
+    display: none !important;
   }
   .comprar {
-    
     > a {
-      font-size: 13px!important;
+      font-size: 13px !important;
     }
   }
 }
@@ -220,13 +217,12 @@ $font-2: "Cinzel", serif;
       text-transform: uppercase;
       font-size: 0;
       &:before {
-        display: none!important;
+        display: none !important;
         content: "Adicionar ao carrinho";
-        font-size: 16px!important;
+        font-size: 16px !important;
         display: block;
         color: #fff;
-        text-transform:uppercase;
-  
+        text-transform: uppercase;
       }
       i.icon-shopping-cart {
         display: none;
@@ -266,7 +262,7 @@ $font-2: "Cinzel", serif;
       border-radius: 0;
     }
   }
-  
+
   a.botao-comprar {
     width: 300px;
     height: 40px;
@@ -278,11 +274,10 @@ $font-2: "Cinzel", serif;
     font-size: 0;
     &:before {
       content: "Adicionar ao carrinho";
-      font-size: 16px!important;
+      font-size: 16px !important;
       display: block;
       color: #fff;
-      text-transform:uppercase;
-
+      text-transform: uppercase;
     }
     i.icon-shopping-cart {
       display: none;
@@ -296,16 +291,30 @@ $font-2: "Cinzel", serif;
 }
 
 .comprar {
- .disponibilidade {
-  display: none !important;
- } 
+  .disponibilidade {
+    display: none !important;
+  }
+}
+
+.principal {
+  ul[id^="formas-pagamento-lista-"] {
+    display: none !important;
+  }
+  #formCalcularCep {
+    display: none !important;
+  }
+}
+.lista-redes {
+  .lista-favoritos {
+    display: none !important;
+  }
 }
 
 form.avise-me-form {
   .avise-tit {
-    color: #402D5D!important;
+    color: #402d5d !important;
     font-size: 24px;
-  }  
+  }
   .avise-descr {
     margin: 15px 0;
     color: #000 !important;
@@ -316,7 +325,7 @@ form.avise-me-form {
     .controls {
       input {
         border-radius: 0;
-        border: 1px solid #402D5D;
+        border: 1px solid #402d5d;
         height: 30px;
         padding: 0;
         text-align: center;
@@ -326,8 +335,8 @@ form.avise-me-form {
   }
   .avise-btn {
     input {
-      background: #402D5D!important;
-      color: #FFF;
+      background: #402d5d !important;
+      color: #fff;
       font-size: 16px;
       border-radius: 0;
       width: 90%;
@@ -406,7 +415,7 @@ form.avise-me-form {
               a.nome-produto {
                 font-size: 16px;
                 color: #000;
-                font-weight: 400!important;
+                font-weight: 400 !important;
               }
               .preco-produto {
               }
@@ -460,7 +469,7 @@ form.avise-me-form {
 }
 .favorite-button-product {
   width: 100%;
-  height:30px;
+  height: 30px;
   display: block;
   background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/fav-stroke.svg")
     center right no-repeat;
@@ -479,10 +488,10 @@ form.avise-me-form {
       }
     }
   }
-  
+
   .info-principal-produto {
     border: 0 !important;
-    margin-bottom: 50px!important;
+    margin-bottom: 50px !important;
     h1.nome-produto {
       font-size: 20px;
       line-height: 23px;
