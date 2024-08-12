@@ -475,6 +475,17 @@ form.avise-me-form {
     center right no-repeat;
   background-size: contain;
   z-index: 50;
+  cursor: pointer;
+}
+.favorite-button-product-favorited {
+  width: 100%;
+  height: 30px;
+  display: block;
+  background: url("https://cdn.awsli.com.br/2454/2454272/arquivos/faved.svg")
+    center right no-repeat;
+  background-size: contain;
+  z-index: 50;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

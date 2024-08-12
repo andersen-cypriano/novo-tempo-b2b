@@ -27,9 +27,12 @@ const productPage = {
   },
   createFavoriteButton: function () {
     const button = document.createElement("a");
-    button.classList.add("favorite-button-product");
-    button.setAttribute("href", `/conta/favorito/${PRODUTO_ID}/adicionar`);
-
+    
+    document.querySelector('.adicionar-favorito') == null ? button.classList.add("favorite-button-product-favorited") : button.classList.add("favorite-button-product");
+    button.addEventListener('click', e=> {
+      e.preventDefault();
+      document.querySelector('.adicionar-favorito').click();
+    })
     document.querySelector(".info-principal-produto .nome-produto").after(button);
   },
   init: function () {
@@ -60,7 +63,6 @@ const productPageMobile = {
       slidesToShow: 2,
       slidesToScroll: 2,
     });
-    console.log('init slick')
   },
   init: function () {
     this.moveShareButton();

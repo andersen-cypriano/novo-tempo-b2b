@@ -18,8 +18,8 @@ const favoriteButton = {
   },
 };
 
-window.addEventListener("load", () => {
-  document.querySelector("[data-id]")
-    ? favoriteButton.init()
-    : null;
-});
+// window.addEventListener("load", () => {
+//   document.querySelector("[data-id]")
+//     ? favoriteButton.init()
+//     : null;
+// });
