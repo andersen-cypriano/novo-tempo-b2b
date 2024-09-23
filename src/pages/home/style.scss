@@ -9,8 +9,55 @@
   display: none!important;
 }
 
-#blank-home-position1 {
-  + .cheio {
+.full-banner {
+  margin: 0;
+  position: relative;
+  li {
+    img {
+      width: 100%;
+    }
+  }
+  button.slick-arrow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0!important;
+    z-index: 1;
+  }
+  button.slick-prev {
+    left: 10px;
+    background: url(https://cdn.awsli.com.br/2454/2454272/arquivos/reshot-icon-arrow-chevron-left-975uqxvkzf.svg) center center no-repeat;
+  }
+  button.slick-next {
+    right: 10px;
+    background: url(https://cdn.awsli.com.br/2454/2454272/arquivos/icone-arrow-right.svg) center center no-repeat;
+  }
+  .slick-dots {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    gap: 7px;
+    li {
+      button {
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        transition: all .5s;
+        border-radius:50%;
+        border: 1px solid #FFF;
+        background-color: transparent;
+      }
+    }
+    li[class="slick-active"] {
+      button {
+        background-color: #FFF;
+      }
+    }
   }
 }
 
